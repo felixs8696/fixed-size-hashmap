@@ -9,10 +9,10 @@ Avg   |  O(1)  |    O(1)   | O(n)
 Worst |  O(n)  |    O(n)   | O(n)
 
 ##Runnable Java Commands line Functions:
-Compile HashMap Implementation: javac PrimitiveHashMap.java
-Compile HashMap Test Cases: 	javac PrimitiveHashMapTest.java
-Run HashMap Implementation: 	java PrimitiveHashMap
-Run HashMap Test Cases: 		java PrimitiveHashMapTest
+* Compile HashMap Implementation: 	`javac PrimitiveHashMap.java`
+* Compile HashMap Test Cases: 		`javac PrimitiveHashMapTest.java`
+* Run HashMap Implementation: 		`java PrimitiveHashMap`
+* Run HashMap Test Cases: 			`java PrimitiveHashMapTest`
 
 ## Important Info:
 1. **Fixed-Size**: The maximum amount of items that can be added to the hashmap is fixed by the constructor and the size of the internal hashmap array is also fixed. This means no resizing or rehashing of items.
