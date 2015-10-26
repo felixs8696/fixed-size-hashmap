@@ -1,5 +1,6 @@
 # Primitive Fixed Size HashMap
 *A fixed-size hash map that associates string keys with arbitrary data objects using only primitive types.*
+
 Avg Time Complexities:
 `Search: O(1)` `Insertion: O(1)` `Deletion: O(1)`
 
