@@ -1,6 +1,7 @@
 # Primitive Fixed Size HashMap
-Avg Time Complexity: `Search: O(1)` `Insertion: O(1)` `Deletion: O(1)`
-A fixed-size hash map that associates string keys with arbitrary data objects using only primitive types.
+*A fixed-size hash map that associates string keys with arbitrary data objects using only primitive types.*
+Avg Time Complexities:
+`Search: O(1)` `Insertion: O(1)` `Deletion: O(1)`
 
 ## Important Info:
 1. **Fixed-Size**: The maximum amount of items that can be added to the hashmap is fixed by the constructor and the size of the internal hashmap array is also fixed. This means no resizing or rehashing of items.
