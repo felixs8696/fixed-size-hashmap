@@ -2,6 +2,7 @@
 *A fixed-size hash map that associates string keys with arbitrary data objects using only primitive types.*
 
 Time Complexities:
+
 Case |  Search  | Insertion | Space
 ------------- | ------------- | -------------| -------------
 Avg   | O(1)  |  O(1) | O(n)
