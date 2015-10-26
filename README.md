@@ -29,3 +29,10 @@ Worst |  O(n)  |    O(n)   | O(n)
 1. Creates a hashmap with a capacity of 'n' items and fixes the hashmap size at the smallest power of 2 greater than 'n'. (to optimize setting hash indices with bit operations)
 
 2. Used java [CheckStyle](http://checkstyle.sourceforge.net/) for style checking
+
+3. Methods
+	* PrimitiveHashMap constructor(size): returns an instance of the class with a fixed amount space for the given number of objects.
+	* boolean set(key, value): stores the given key/value pair in the hash map.Returns true if there is enough allocated space for the object, false if not.
+	* get(key): return the object associated with the given key, or null if it does not exist.
+	* delete(key): delete the object associated with the given key, returning the it on success or null if the key has no value.
+	* float load(): return a float value representing the number of items in the hash map/ size of hash map)`) of the data structure. Since the size of the dat structure is fixed, this should never be greater than 1.
