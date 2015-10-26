@@ -197,7 +197,7 @@ public class PrimitiveHashMap<ValObj> {
   */
   public final float load() {
     @SuppressWarnings("unchecked")
-    float loadFactor = (float) itemCount / (float) hashMapsize;
+    float loadFactor = (float) itemCount / (float) capacity;
     return loadFactor;
   }
 

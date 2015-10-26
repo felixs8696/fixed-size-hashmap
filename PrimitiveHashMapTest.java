@@ -131,6 +131,21 @@ public class PrimitiveHashMapTest {
 	}
 
 	@Test
+	public void testExactLoadFactor() {
+		long startTime = System.nanoTime();
+		PrimitiveHashMap<Integer> temp = new PrimitiveHashMap<Integer>();
+		PrimitiveHashMap<Integer> hashmap = temp.constructor(10);
+		for (int i = 0; i < 5; i++) {
+			hashmap.set(String.valueOf(i), i);
+		}
+		assertEquals(.5, hashmap.load(), EPSILON);
+
+		long endTime = System.nanoTime();
+		double duration = (endTime - startTime)/1000000.0;
+		System.out.println("testExactLoadFactor() took " + duration + "ms to complete");
+	}
+
+	@Test
 	public void testOverflowLoadFactor() {
 		long startTime = System.nanoTime();
 		PrimitiveHashMap<Integer> temp = new PrimitiveHashMap<Integer>();
