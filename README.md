@@ -2,11 +2,10 @@
 *A fixed-size hash map that associates string keys with arbitrary data objects using only primitive types.*
 
 Time Complexities:
-
 Case |  Search  | Insertion | Space
 ------------- | ------------- | -------------| -------------
-Avg   | `O(1)`  |  `O(1)` | `O(n)`
-Worst   | `O(n)`  | `O(n)` | `O(n)`
+Avg   | O(1)  |  O(1) | O(n)
+Worst   | O(n)  | O(n) | O(n)
 
 ## Important Info:
 1. **Fixed-Size**: The maximum amount of items that can be added to the hashmap is fixed by the constructor and the size of the internal hashmap array is also fixed. This means no resizing or rehashing of items.
