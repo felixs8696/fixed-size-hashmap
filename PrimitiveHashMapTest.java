@@ -157,7 +157,7 @@ public class PrimitiveHashMapTest {
 
 		long endTime = System.nanoTime();
 		double duration = (endTime - startTime)/1000000.0;
-		System.out.println("testFixedSizeLoadFactor() took " + duration + "ms to complete");
+		System.out.println("testOverflowLoadFactor() took " + duration + "ms to complete");
 	}
 
 	@Test
@@ -181,22 +181,35 @@ public class PrimitiveHashMapTest {
 	}
 
 	//Uncomment linkedListSize() method in PrimitiveHashMap.java to successfully run this test.
-	// @Test
-	// public void testDuplicateValues() {
-	// 	long startTime = System.nanoTime(); 
+	@Test
+	public void testDuplicateValues() {
+		long startTime = System.nanoTime(); 
 
-	// 	PrimitiveHashMap temp = new PrimitiveHashMap<String>();
-	// 	PrimitiveHashMap testHashMap = temp.constructor(10);
-	// 	testHashMap.set("K", "Kleiner");
-	// 	testHashMap.set("K", "Kleiner");
-	// 	testHashMap.set("K", "Kleiner");
-	// 	testHashMap.set("K", "Kleiner");
-	// 	assertEquals(1, testHashMap.linkedListSize("K"));
-	// 	long endTime = System.nanoTime();
+		PrimitiveHashMap temp = new PrimitiveHashMap<String>();
+		PrimitiveHashMap testHashMap = temp.constructor(10);
+		testHashMap.set("K", "Kleiner");
+		testHashMap.set("K", "Kleiner");
+		testHashMap.set("K", "Kleiner");
+		testHashMap.set("K", "Kleiner");
+		assertEquals(1, testHashMap.linkedListSize("K"));
+		long endTime = System.nanoTime();
 
-	// 	double duration = (endTime - startTime)/1000000.0;
-	// 	System.out.println("testOverrideValues() took " + duration + "ms to complete");
-	// }
+		double duration = (endTime - startTime)/1000000.0;
+		System.out.println("testOverrideValues() took " + duration + "ms to complete");
+	}
+
+	@Test
+	public void testSuperLargeConstructor() {
+		long startTime = System.nanoTime(); 
+
+		PrimitiveHashMap temp = new PrimitiveHashMap<String>();
+		PrimitiveHashMap testHashMap = temp.constructor((int) (Math.pow(2,31) + 1));
+		testHashMap.set("K", "Kleiner");
+		assertEquals("Kleiner", testHashMap.get("K"));
+		long endTime = System.nanoTime();
+		double duration = (endTime - startTime)/1000000.0;
+		System.out.println("testSuperLargeConstructor() took " + duration + "ms to complete");
+	}
 
 	public static void main(String[] args) {
       Result result = JUnitCore.runClasses(PrimitiveHashMapTest.class);
